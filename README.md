@@ -1,7 +1,7 @@
 ## Tiny C Compiler
 C Scripting Everywhere - The __Smallest__ ANSI C compiler
 
-这是一个__翻译提示文本的补丁__.  可能也会在未来Merge其它patch.
+这是一个 __翻译提示文本的补丁__ .  可能也会在未来Merge其它patch.
 
 对于TCC来说, 加入太多语言支持会增加它的体积, 这是不明智的. 这个分支只会包含中文的提示本地化.
 
