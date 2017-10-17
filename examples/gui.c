@@ -1,4 +1,4 @@
-#!./tcc -run -L/usr/X11R6/lib -lX11
+#!./tcc -run -lX11
 #include <stdlib.h>
 #include <stdio.h>
 #include <X11/Xlib.h>
@@ -12,12 +12,12 @@ int main(int argc, char **argv)
 
     display = XOpenDisplay("");
     if (!display) {
-        fprintf(stderr, "Could not open X11 display\n");
+        fprintf(stderr, "无法打开X11显示!\n");
         exit(1);
     }
-    printf("X11 display opened.\n");
+    printf("X11显示已经打开.\n");
     screen = XScreenOfDisplay(display, 0);
-    printf("width = %d\nheight = %d\ndepth = %d\n",
+    printf("显示宽 %dpx\n高 %dpx\n颜色深 %dbit\n",
            screen->width,
            screen->height,
            screen->root_depth);

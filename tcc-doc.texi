@@ -176,7 +176,7 @@ script, several TCC options can be given @emph{after} the
 @option{-run} option, separated by spaces. Example:
 
 @example
-tcc "-run -L/usr/X11R6/lib -lX11" ex4.c
+tcc "-run -L/usr/X11R6/lib -lX11" gui.c
 @end example
 
 In a script, it gives the following header:

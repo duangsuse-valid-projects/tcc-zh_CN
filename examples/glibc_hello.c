@@ -3,6 +3,6 @@
 
 int main()
 {
-    printf("Hello World\n");
+    printf("你好, gLibc世界!\n");
     return 0;
 }

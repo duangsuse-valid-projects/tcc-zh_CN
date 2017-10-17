@@ -69,14 +69,14 @@ int main(int argc, char **argv)
     int i, res, p;
 
     if (argc < 3) {
-        printf("usage: %s: result numbers...\n"
-               "Try to find result from numbers with the 4 basic operations.\n", argv[0]);
+        printf("用法: %s: 被选择的数...\n"
+			"尝试利用四个基础操作从输入数中找出结果!\n", argv[0]);
         exit(1);
     }
 
     p = 1;
     result = atoi(argv[p]);
-    printf("result=%d\n", result);
+    printf("结果->%d\n", result);
     nb_num = 0;
     for(i=p+1;i<argc;i++) {
         tab[nb_num++] = atoi(argv[i]);
@@ -92,7 +92,7 @@ int main(int argc, char **argv)
         }
         return 0;
     } else {
-        printf("Impossible\n");
+        printf("不存在的\n");
         return 1;
     }
 }

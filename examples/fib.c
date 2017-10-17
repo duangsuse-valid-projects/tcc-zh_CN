@@ -13,12 +13,12 @@ int main(int argc, char **argv)
 {
     int n;
     if (argc < 2) {
-        printf("usage: fib n\n"
-               "Compute nth Fibonacci number\n");
+        printf("使用方法: fib n\n"
+               		"计算第Fibo数列中第n个数\n");
         return 1;
     }
 
     n = atoi(argv[1]);
-    printf("fib(%d) = %d\n", n, fib(n, 2));
+    printf("fib(%d) = %d\n", n, fib(n));
     return 0;
 }

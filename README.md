@@ -43,7 +43,7 @@ By default, tcc is installed in /usr/local/bin.
 
 ##### Introduction
 
-We assume here that you know ANSI C. Look at the example ex1.c to know
+We assume here that you know ANSI C. Look at the example hello_world.c to know
 what the programs look like.
 
 The include file <tcclib.h> can be used if you want a small basic libc
@@ -58,18 +58,18 @@ ANSI C.
 
 ##### Examples
 
-ex1.c: simplest example (hello world). Can also be launched directly
-as a script: './ex1.c'.
+hello_world.c: simplest example (hello world). Can also be launched directly
+as a script: './hello_world.c'.
 
-ex2.c: more complicated example: find a number with the four
+find_num.c: more complicated example: find a number with the four
 operations given a list of numbers (benchmark).
 
-ex3.c: compute fibonacci numbers (benchmark).
+fib.c: compute fibonacci numbers (benchmark).
 
-ex4.c: more complicated: X11 program. Very complicated test in fact
+gui.c: more complicated: X11 program. Very complicated test in fact
 because standard headers are being used !
 
-ex5.c: 'hello world' with standard glibc headers.
+glic_hello.c: 'hello world' with standard glibc headers.
 
 tcc.c: TCC can of course compile itself. Used to check the code
 generator.
