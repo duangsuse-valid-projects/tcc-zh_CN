@@ -1,12 +1,12 @@
 version 0.9.25:
 
 - first support for x86-64 target (Shinichiro Hamaji)
-- support �Clibc
+- support 礐libc
 - split tcc.c into tcc.h libtcc.c tccpp.c tccgen.c tcc.c
 - improved preprocess output with linenumbers and spaces preserved
 - tcc_relocate now copies code into user buffer
 - fix bitfields with non-int types and in unions
-- improve ARM cross-compiling (Daniel Glöckner)
+- improve ARM cross-compiling (Daniel Gl枚ckner)
 - link stabstr sections from multiple objects
 - better (still limited) support for multiple TCCStates
 
@@ -23,7 +23,7 @@ version 0.9.24:
 - Import changesets (part 4) 428,457,460,467: defines for openbsd etc.
 - Use _WIN32 for a windows hosted tcc and define it for the PE target,
   otherwise define __unix / __linux (Detlef Riekenberg)
-- Import changesets (part 3) 409,410: ARM EABI by Daniel Glöckner
+- Import changesets (part 3) 409,410: ARM EABI by Daniel Gl枚ckner
 - Some in-between fixes:
   TCC -E no longer hangs with macro calls involving newlines.
   (next_nomacro1 now advances the read-pointer with TOK_LINEFEED)
@@ -64,7 +64,7 @@ version 0.9.24:
   432/434: Cast double and ptr to bool (grischka)
   420: Zero pad x87 tenbyte long doubles (Felix Nawothnig)
   417: Make 'sizeof' unsigned (Rob Landley)
-  397: Fix save_reg for longlongs (Daniel Glöckner)
+  397: Fix save_reg for longlongs (Daniel Gl枚ckner)
   396: Fix "invalid relocation entry" problem on ubuntu - (Bernhard Fischer)
 
 - ignore AS_NEEDED ld command
@@ -106,7 +106,7 @@ version 0.9.22:
 
 version 0.9.21:
 
-- ARM target support (Daniel Glöckner)
+- ARM target support (Daniel Gl枚ckner)
 - added '-funsigned-char, '-fsigned-char' and
   '-Wimplicit-function-declaration'
 - fixed assignment of const struct in struct
@@ -121,7 +121,7 @@ version 0.9.21:
 - section alignment fixes
 - bit fields fixes
 - do not generate code for unused inline functions
-- '-oformat' linker option. 
+- '-oformat' linker option.
 - added 'binary' output format.
 
 version 0.9.20:
@@ -335,7 +335,7 @@ version 0.9.3:
  - full ISOC99 64 bit 'long long' support.
  - full 32 bit 'float', 64 bit 'double' and 96 bit 'long double' support.
  - added '-U' option.
- - added assembly sections support. 
+ - added assembly sections support.
  - even faster startup time by mmaping sections instead of mallocing them.
  - added GNUC __attribute__ keyword support (currently supports
     'section' and 'aligned' attributes).
