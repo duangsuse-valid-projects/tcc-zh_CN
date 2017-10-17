@@ -50,3 +50,15 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+# configure
+config.h
+config.mak
+config.texi
+
+# tcc build/test files
+tcc.1
+libtcc_test
+tcc
+tcc.pod
+tests/
