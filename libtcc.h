@@ -26,7 +26,8 @@ LIBTCCAPI void tcc_enable_debug(TCCState *s);
 
 /* set error/warning display callback */
 LIBTCCAPI void tcc_set_error_func(TCCState *s, void *error_opaque,
-                        void (*error_func)(void *opaque, const char *msg));
+                                  void (*error_func)(void *opaque,
+                                                     const char *msg));
 
 /* set/reset a warning */
 LIBTCCAPI int tcc_set_warning(TCCState *s, const char *warning_name, int value);
@@ -41,7 +42,8 @@ LIBTCCAPI int tcc_add_include_path(TCCState *s, const char *pathname);
 LIBTCCAPI int tcc_add_sysinclude_path(TCCState *s, const char *pathname);
 
 /* define preprocessor symbol 'sym'. Can put optional value */
-LIBTCCAPI void tcc_define_symbol(TCCState *s, const char *sym, const char *value);
+LIBTCCAPI void tcc_define_symbol(TCCState *s, const char *sym,
+                                 const char *value);
 
 /* undefine preprocess symbol 'sym' */
 LIBTCCAPI void tcc_undefine_symbol(TCCState *s, const char *sym);
@@ -61,17 +63,18 @@ LIBTCCAPI int tcc_compile_string(TCCState *s, const char *buf);
 /* linking commands */
 
 /* set output type. MUST BE CALLED before any compilation */
-#define TCC_OUTPUT_MEMORY   0 /* output will be ran in memory (no
-                                 output file) (default) */
-#define TCC_OUTPUT_EXE      1 /* executable file */
-#define TCC_OUTPUT_DLL      2 /* dynamic library */
-#define TCC_OUTPUT_OBJ      3 /* object file */
+#define TCC_OUTPUT_MEMORY                                           \
+  0                             /* output will be ran in memory (no \
+                                   output file) (default) */
+#define TCC_OUTPUT_EXE 1        /* executable file */
+#define TCC_OUTPUT_DLL 2        /* dynamic library */
+#define TCC_OUTPUT_OBJ 3        /* object file */
 #define TCC_OUTPUT_PREPROCESS 4 /* preprocessed file (used internally) */
 LIBTCCAPI int tcc_set_output_type(TCCState *s, int output_type);
 
-#define TCC_OUTPUT_FORMAT_ELF    0 /* default output format: ELF */
+#define TCC_OUTPUT_FORMAT_ELF 0    /* default output format: ELF */
 #define TCC_OUTPUT_FORMAT_BINARY 1 /* binary image output */
-#define TCC_OUTPUT_FORMAT_COFF   2 /* COFF */
+#define TCC_OUTPUT_FORMAT_COFF 2   /* COFF */
 
 /* equivalent to -Lpath option */
 LIBTCCAPI int tcc_add_library_path(TCCState *s, const char *pathname);
