@@ -1,45 +1,47 @@
-Tiny C Compiler - C Scripting Everywhere - The Smallest ANSI C compiler
------------------------------------------------------------------------
+## Tiny C Compiler
+C Scripting Everywhere - The __Smallest__ ANSI C compiler
 
-Features:
---------
+这是一个__翻译提示文本的补丁__.  可能也会在未来Merge其它patch.
 
-- SMALL! You can compile and execute C code everywhere, for example on
+对于TCC来说, 加入太多语言支持会增加它的体积, 这是不明智的. 这个分支只会包含中文的提示本地化.
+
+### Features:
+
+- __SMALL!__ You can compile and execute C code everywhere, for example on
   rescue disks.
 
-- FAST! tcc generates optimized x86 code. No byte code
+- __FAST!__ tcc generates optimized x86 code. No byte code
   overhead. Compile, assemble and link about 7 times faster than 'gcc
   -O0'.
 
-- UNLIMITED! Any C dynamic library can be used directly. TCC is
+- __UNLIMITED!__ Any C dynamic library can be used directly. TCC is
   heading torward full ISOC99 compliance. TCC can of course compile
   itself.
 
-- SAFE! tcc includes an optional memory and bound checker. Bound
+- __SAFE!__ tcc includes an optional memory and bound checker. Bound
   checked code can be mixed freely with standard code.
 
-- Compile and execute C source directly. No linking or assembly
-  necessary. Full C preprocessor included. 
+- Compile and execute C source __directly__. No linking or assembly
+  necessary. Full C preprocessor included.
 
-- C script supported : just add '#!/usr/local/bin/tcc -run' at the first
+- __C script supported__ : just add '#!/usr/local/bin/tcc -run' at the first
   line of your C source, and execute it directly from the command
   line.
 
-Documentation:
--------------
+### Documentation:
 
-1) Installation on a i386 Linux host (for Windows read tcc-win32.txt)
-
+##### Installation on a i386 Linux host (for Windows read tcc-win32.txt)
+```shell
    ./configure
    make
    make test
    make install
-
+```
 By default, tcc is installed in /usr/local/bin.
 ./configure --help  shows configuration options.
 
 
-2) Introduction
+##### Introduction
 
 We assume here that you know ANSI C. Look at the example ex1.c to know
 what the programs look like.
@@ -54,7 +56,7 @@ launch the C code as a shell or perl script :-) The command line
 arguments are put in 'argc' and 'argv' of the main functions, as in
 ANSI C.
 
-3) Examples
+##### Examples
 
 ex1.c: simplest example (hello world). Can also be launched directly
 as a script: './ex1.c'.
@@ -75,16 +77,15 @@ generator.
 tcctest.c: auto test for TCC which tests many subtle possible bugs. Used
 when doing 'make test'.
 
-4) Full Documentation
+##### Full Documentation
 
 Please read tcc-doc.html to have all the features of TCC.
 
 Additional information is available for the Windows port in tcc-win32.txt.
 
-License:
--------
+### License:
 
-TCC is distributed under the GNU Lesser General Public License (see
+TCC is distributed under the __GNU Lesser General Public License__ (see
 COPYING file).
 
 Fabrice Bellard.
